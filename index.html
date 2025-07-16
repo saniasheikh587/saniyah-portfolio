@@ -76,6 +76,17 @@
     }
   </style>
 </head>
+ <script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+ 
 <body>
   <div class="container">
     <div class="photo">
