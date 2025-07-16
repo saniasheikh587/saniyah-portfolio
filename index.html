@@ -4,89 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saniyah Kauser Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f7fb;
-      color: #333;
-    }
-
-    .container {
-      display: flex;
-      max-width: 1000px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .photo {
-      flex: 1;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .photo img {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 10px;
-    }
-
-    .info {
-      flex: 2;
-      padding: 30px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #003366;
-    }
-
-    h2 {
-      color: #005599;
-      margin-top: 30px;
-    }
-
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: #005599;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
- <script>
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle('visible', entry.isIntersecting);
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => observer.observe(section));
-</script>
- 
 <body>
   <div class="container">
     <div class="photo">
@@ -94,7 +13,7 @@
     </div>
     <div class="info">
       <h1>SANIYAH KAUSER</h1>
-      <p><em>Aspiring IoT, Cybersecurity & Blockchain Engineer</em></p>
+      <p class="role">Aspiring IoT, Cybersecurity & Blockchain Engineer</p>
       <p>Email: <a href="mailto:saniasheikh587@gmail.com">saniasheikh587@gmail.com</a><br />
          Phone: 9663293478<br />
          Location: Mangalore, DK, Karnataka<br />
@@ -120,8 +39,8 @@
       <div class="section">
         <h2>Projects</h2>
         <ul>
-          <li><strong>Smart Assistive Devices for the Visually Impaired:</strong> Includes smart reading glasses and smart shoes to help blind individuals navigate using IoT-based sensors.</li>
-          <li><strong>IoT-based Coin-Embedded Solar-Powered Mobile Charging Station:</strong> A final-year project to provide public phone charging powered by solar and controlled by a coin-based IoT mechanism.</li>
+          <li><strong>Smart Assistive Devices for the Visually Impaired:</strong> Smart glasses and shoes for navigation using IoT sensors.</li>
+          <li><strong>IoT-based Coin-Embedded Solar-Powered Mobile Charging Station:</strong> Solar charging station with coin-based IoT control.</li>
         </ul>
       </div>
 
@@ -139,7 +58,7 @@
         <h2>Achievements & Interests</h2>
         <ul>
           <li>Cleared NPTEL Cryptography & Network Security exam with 65%</li>
-          <li>Strong in public speaking and advertising</li>
+          <li>Public speaking and advertising skills</li>
           <li>Skilled in social media promotions</li>
         </ul>
       </div>
@@ -152,5 +71,18 @@
       </div>
     </div>
   </div>
+
+  <!-- Scroll-triggered animation script -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
+
