@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saniyah Kauser Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .photo {
+      flex: 1;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+    }
+
+    .info {
+      flex: 2;
+      padding: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #003366;
+    }
+
+    h2 {
+      color: #005599;
+      margin-top: 30px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #005599;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo">
+      <img src="profile.png" alt="Saniyah Kauser Photo" />
+    </div>
+    <div class="info">
+      <h1>SANIYAH KAUSER</h1>
+      <p><em>Aspiring IoT, Cybersecurity & Blockchain Engineer</em></p>
+      <p>Email: <a href="mailto:saniasheikh587@gmail.com">saniasheikh587@gmail.com</a><br />
+         Phone: 9663293478<br />
+         Location: Mangalore, DK, Karnataka<br />
+         LinkedIn: <a href="https://www.linkedin.com/in/saniyahkauser-568955258" target="_blank">saniyahkauser</a>
+      </p>
+
+      <div class="section">
+        <h2>Career Objective</h2>
+        <p>A passionate and detail-oriented Computer Science Engineering student specializing in IoT, Cybersecurity, and Blockchain Technology. Skilled in innovative tech projects and eager to contribute to impactful real-world solutions while gaining industry experience through internship opportunities.</p>
+      </div>
+
+      <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Python, JavaScript, Java</li>
+          <li>HTML, CSS</li>
+          <li>IoT, Blockchain, Cybersecurity</li>
+          <li>GitHub, VS Code, MS Excel</li>
+          <li>Agile Scrum, Embedded Systems</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Smart Assistive Devices for the Visually Impaired:</strong> Includes smart reading glasses and smart shoes to help blind individuals navigate using IoT-based sensors.</li>
+          <li><strong>IoT-based Coin-Embedded Solar-Powered Mobile Charging Station:</strong> A final-year project to provide public phone charging powered by solar and controlled by a coin-based IoT mechanism.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Agile Scrum Master – Simplilearn</li>
+          <li>Python 3.4.3 – IIT Bombay</li>
+          <li>MS Excel – Coursera</li>
+          <li>Accenture Forage – Data Analytics and Visualization</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Achievements & Interests</h2>
+        <ul>
+          <li>Cleared NPTEL Cryptography & Network Security exam with 65%</li>
+          <li>Strong in public speaking and advertising</li>
+          <li>Skilled in social media promotions</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Creative Writing, Editing, Painting, Calligraphy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
