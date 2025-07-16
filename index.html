@@ -9,24 +9,25 @@
 <body>
   <div class="container">
     <div class="photo">
-      <img src="profile.png" alt="Saniyah Kauser Photo" />
+      <img src="profile.png" alt="Saniyah Kauser" />
     </div>
     <div class="info">
-      <h1>SANIYAH KAUSER</h1>
+      <h1 class="animated-name">SANIYAH KAUSER</h1>
       <p class="role">Aspiring IoT, Cybersecurity & Blockchain Engineer</p>
-      <p>Email: <a href="mailto:saniasheikh587@gmail.com">saniasheikh587@gmail.com</a><br />
-         Phone: 9663293478<br />
-         Location: Mangalore, DK, Karnataka<br />
-         LinkedIn: <a href="https://www.linkedin.com/in/saniyahkauser-568955258" target="_blank">saniyahkauser</a>
+      <p>
+        📧 <a href="mailto:saniasheikh587@gmail.com">saniasheikh587@gmail.com</a><br>
+        📞 9663293478<br>
+        📍 Mangalore, DK, Karnataka<br>
+        🔗 <a href="https://www.linkedin.com/in/saniyahkauser-568955258" target="_blank">LinkedIn Profile</a>
       </p>
 
       <div class="section">
-        <h2>Career Objective</h2>
+        <h2 class="subhead">Career Objective</h2>
         <p>A passionate and detail-oriented Computer Science Engineering student specializing in IoT, Cybersecurity, and Blockchain Technology. Skilled in innovative tech projects and eager to contribute to impactful real-world solutions while gaining industry experience through internship opportunities.</p>
       </div>
 
       <div class="section">
-        <h2>Technical Skills</h2>
+        <h2 class="subhead">Technical Skills</h2>
         <ul>
           <li>Python, JavaScript, Java</li>
           <li>HTML, CSS</li>
@@ -37,7 +38,7 @@
       </div>
 
       <div class="section">
-        <h2>Projects</h2>
+        <h2 class="subhead">Projects</h2>
         <ul>
           <li><strong>Smart Assistive Devices for the Visually Impaired:</strong> Smart glasses and shoes for navigation using IoT sensors.</li>
           <li><strong>IoT-based Coin-Embedded Solar-Powered Mobile Charging Station:</strong> Solar charging station with coin-based IoT control.</li>
@@ -45,17 +46,20 @@
       </div>
 
       <div class="section">
-        <h2>Certifications</h2>
+        <h2 class="subhead">Certifications</h2>
         <ul>
           <li>Agile Scrum Master – Simplilearn</li>
-          <li>Python 3.4.3 – IIT Bombay</li>
+          <li>Python Training – IIT Bombay</li>
+          <li>Java Training – IIT Bombay</li>
+          <li>Linux Training – IIT Bombay</li>
+          <li>AI Services – IBM</li>
           <li>MS Excel – Coursera</li>
-          <li>Accenture Forage – Data Analytics and Visualization</li>
+          <li>Data Analytics – Accenture Forage</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2>Achievements & Interests</h2>
+        <h2 class="subhead">Achievements & Interests</h2>
         <ul>
           <li>Cleared NPTEL Cryptography & Network Security exam with 65%</li>
           <li>Public speaking and advertising skills</li>
@@ -64,7 +68,7 @@
       </div>
 
       <div class="section">
-        <h2>Hobbies</h2>
+        <h2 class="subhead">Hobbies</h2>
         <ul>
           <li>Creative Writing, Editing, Painting, Calligraphy</li>
         </ul>
@@ -72,17 +76,18 @@
     </div>
   </div>
 
-  <!-- Scroll-triggered animation script -->
   <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        entry.target.classList.toggle('visible', entry.isIntersecting);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
-    sections.forEach(section => observer.observe(section));
+    document.querySelectorAll('.section, .subhead').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
-
