@@ -5,14 +5,14 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f8f9fa, #dee2e6);
+  background: linear-gradient(to right, #f4f7f9, #dee2e6);
   color: #212529;
   animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .container {
@@ -24,13 +24,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  transition: transform 0.5s ease;
-  animation: slideIn 1s ease-out;
-}
-
-@keyframes slideIn {
-  0% { transform: translateY(50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
 }
 
 .photo {
@@ -40,7 +33,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transition: background 0.3s ease;
 }
 
 .photo img {
@@ -59,18 +51,18 @@ body {
 .info {
   flex: 2;
   padding: 40px 30px;
-  animation: fadeInText 1.5s ease-out;
 }
 
-@keyframes fadeInText {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-h1 {
+.animated-name {
   margin: 0;
   font-size: 36px;
   color: #0d47a1;
+  animation: dropIn 1.5s ease-out forwards;
+}
+
+@keyframes dropIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .role {
@@ -79,13 +71,21 @@ h1 {
   margin-bottom: 15px;
 }
 
-h2 {
+h2.subhead {
   color: #0c3c72;
   margin-top: 30px;
   position: relative;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: all 0.7s ease-out;
 }
 
-h2::after {
+h2.subhead.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+h2.subhead::after {
   content: '';
   display: block;
   width: 40px;
@@ -94,7 +94,7 @@ h2::after {
   margin-top: 5px;
 }
 
-p, li {
+ul, p, li {
   font-size: 16px;
   line-height: 1.7;
 }
@@ -113,11 +113,11 @@ a:hover {
   color: #004080;
 }
 
-/* Scroll-triggered animations */
+/* Scroll-triggered sections */
 .section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
 }
 
 .section.visible {
